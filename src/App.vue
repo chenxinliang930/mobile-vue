@@ -1,8 +1,20 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <div class="left">
+        ROOM
+      </div>
+      <div class="right">
+        <router-link to="/">
+          <van-icon name="wap-nav" />
+        </router-link>
+        <router-link to="/about">
+          <van-icon name="gem" />
+        </router-link>
+        <router-link to="/detail">
+          <van-icon name="fire" />
+        </router-link>
+      </div>
     </div>
     <router-view />
   </div>
@@ -17,7 +29,20 @@
   color: #2c3e50;
 }
 #nav {
-  padding: 30px;
+  overflow: hidden;
+  .left {
+    font-size: 1.5rem;
+    font-weight: bold;
+    float: left;
+    vertical-align: middle;
+  }
+  .right {
+    float: right;
+    a {
+      margin: 0 0.5rem;
+    }
+  }
+  padding: 1rem 5%;
   a {
     font-weight: bold;
     color: #2c3e50;
